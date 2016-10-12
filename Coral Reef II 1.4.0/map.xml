@@ -99,12 +99,7 @@
             <rectangle id="magenta-wool" min="-283,198" max="-297,212" />
         </union>
         <!-- Applied -->
-        <apply block="only-gold" message="You may only break gold blocks in your base!">
-            <region>
-                <region id="blue-base" />
-                <region id="red-base" />
-            </region>
-        </apply>
+        <apply region="bases" block-place="never" block-break="only-gold" message="You may only break gold blocks in your base!"/>
         <apply enter="only-red" message="You cannot enter the enemy base!">
             <region>
                 <region id="red-base" />
@@ -128,7 +123,10 @@
         <apply block="deny-void" message="You cannot build outside the map area!">
             <region>
                 <negative>
-                    <region id="bridgezones" />
+                    <union>
+                        <region id="bridgezones" />
+                        <region id="bases" />
+                    </union>
                 </negative>
             </region>
         </apply>
