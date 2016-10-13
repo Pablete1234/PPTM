@@ -1,6 +1,6 @@
 <map proto="1.4.1">
     <name>The Intercontinental Textile Import and Export Industry</name>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
     <gamemode>ctw</gamemode>
     <edition>tournament</edition>
     <objective>Capture the enemy wools to win!</objective>
@@ -36,7 +36,7 @@
     </spawns>
     <kits>
         <kit id="spawn-kit">
-            <item slot="0" unbreakable="true" material="stone sword" />
+            <item slot="0" unbreakable="true" material="iron sword" />
             <item slot="1" unbreakable="true" material="bow" />
             <item slot="2" unbreakable="true" material="iron pickaxe" enchantment="dig speed:1"/>
             <item slot="3" unbreakable="true" material="diamond axe" />
@@ -79,6 +79,7 @@
         <item>smooth brick</item>
         <item>brick</item>
         <item>bow</item>
+        <item>iron sword</item>
         <item>iron pickaxe</item>
         <item>diamond axe</item>
         <item>stone sword</item>
@@ -122,7 +123,7 @@
             </union>
         </negative>
  
-        
+        <apply region="everywhere" block-place="no-place"/>
         <apply region="red-roof" enter="never" message="You may not access the spawn roof"/>
         <apply region="blue-roof" enter="never" message="You may not access the spawn roof"/>
         <apply region="red-spawn-zone" block="never" message="You may not break blocks in the spawn." />
@@ -139,6 +140,8 @@
     <filters>
         <team id="red-only">red-team</team>
         <team id="blue-only">blue-team</team>
+        
+        <cause id="no-place">player</cause>
         
         <not id="no-void">
             <void/>
@@ -182,6 +185,7 @@
             <material>wood</material>
             <material>wood step</material>
             <material>wood button</material>
+            <material>wood stairs</material>
             <material>wool</material>
             <material>trap door</material>
             <material>wooden door</material>
@@ -198,6 +202,7 @@
         </any>
         <any id="s-blocks">
             <material>emerald block</material>
+            <material>wood stairs</material>
             <material>beacon</material>
             <material>obsidian</material>
             <material>slime block</material>
@@ -272,7 +277,7 @@
         <renewable region="iron-zones" interval="10s" grow="false" />
     </renewables>
     <falling-blocks>
-        <rule>
+        <rule delay="4">
             <filter>
                 <filter id="f-blocks"/>
             </filter>
