@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map proto="1.4.0">
+    <name>Coral Reef II</name>
+    <version>1.4.2</version>
+    <gamemode>ctw</gamemode>
+    <objective>Capture the wools and return them to your victory monument.</objective>
+    <authors>
+        <author uuid="38ab65dd-95f9-406f-917c-6accc995421f" />
+        <!-- GoldenOre -->
+    </authors>
+    <contributors>
+        <contributor uuid="621b2aa8-4e5f-4ed8-bd36-0ae2f8952a06" contribution="Feedback" />
+        <!-- Strangey -->
+    </contributors>
+    <respawn delay="2s" />
+    <teams>
+        <team id="red" color="dark red" max="8" max-overfill="8">Red</team>
+        <team id="blue" color="blue" max="8" max-overfill="8">Blue</team>
+    </teams>
+    <kits>
+        <kit id="spawn">
+            <item slot="0">stone sword</item>
+            <item slot="1" enchantment="arrow infinite">bow</item>
+            <item slot="2" enchantment="durability:4;dig speed:1">iron pickaxe</item>
+            <item slot="6" amount="1">golden apple</item>
+            <item slot="3" amount="64" damage="2">wood</item>
+            <item slot="4" amount="64">sandstone</item>
+            <item slot="5" amount="64" damage="2">wood</item>
+            <item slot="8" amount="32">golden carrot</item>
+            <item slot="28" amount="1">arrow</item>
+            <effect duration="8" amplifier="5">resistance</effect>
+        </kit>
+    </kits>
+    <spawns>
+        <spawn team="blue" kit="spawn">
+            <regions yaw="-90">
+                <point>-473.5,250,171</point>
+            </regions>
+        </spawn>
+        <spawn team="red" kit="spawn">
+            <regions yaw="90">
+                <point>-261.5,250,171</point>
+            </regions>
+        </spawn>
+        <default>
+            <regions yaw="0">
+                <point>-366.5,45,111.5</point>
+            </regions>
+        </default>
+    </spawns>
+    <time result="objectives">45m</time>
+    <block-drops>
+        <rule>
+            <region>
+                <everywhere />
+            </region>
+            <filter>
+                <any>
+                    <material>sponge</material>
+                </any>
+            </filter>
+            <drops>
+                <item amount="8" material="golden apple" />
+            </drops>
+        </rule>
+    </block-drops>
+    <filters>
+        <filter name="deny-spawner">
+            <deny>
+                <block>mob spawner</block>
+            </deny>
+        </filter>
+        <team id="only-red">red</team>
+        <team id="only-blue">blue</team>
+        <not id="deny-void">
+            <void />
+        </not>
+        <material id="only-gold">gold block</material>
+    </filters>
+    <regions>
+        <rectangle id="map" min="-oo,-oo" max="oo,oo" />
+        <union id="bridgezones">
+            <cuboid id="bridgezone1" min="-326,30,130" max="-409,0,212" />
+            <cuboid id="bridgezone2" min="-438,30,192" max="-452,0,150" />
+            <cuboid id="bridgezone3" min="-297,30,150" max="-283,0,192" />
+        </union>
+        <union id="bases">
+            <cuboid id="blue-base" min="-485,30,183" max="-462,0,159" />
+            <cuboid id="red-base" min="-250,30,159" max="-273,0,183" />
+        </union>
+        <!-- Red must enter -->
+        <union id="red-wools">
+            <rectangle id="green-wool" min="-452,212" max="-438,198" />
+            <rectangle id="lime-wool" min="-452,144" max="-438,130" />
+        </union>
+        <!-- Blue must enter -->
+        <union id="blue-wools">
+            <rectangle id="purple-wool" min="-283,130" max="-297,144" />
+            <rectangle id="magenta-wool" min="-283,198" max="-297,212" />
+        </union>
+        <!-- Applied -->
+        <apply region="bases" block-place="never" block-break="only-gold" message="You may only break gold blocks in your base!"/>
+        <apply enter="only-red" message="You cannot enter the enemy base!">
+            <region>
+                <region id="red-base" />
+            </region>
+        </apply>
+        <apply enter="only-blue" message="You cannot enter the enemy base!">
+            <region>
+                <region id="blue-base" />
+            </region>
+        </apply>
+        <apply enter="only-red" block="only-red" message="You cannot enter your own wool room!">
+            <region>
+                <region id="red-wools" />
+            </region>
+        </apply>
+        <apply enter="only-blue" block="only-blue" message="You cannot enter your own wool room!">
+            <region>
+                <region id="blue-wools" />
+            </region>
+        </apply>
+        <apply block="deny-void" message="You cannot build outside the map area!">
+            <region>
+                <negative>
+                    <union>
+                        <region id="bridgezones" />
+                        <region id="bases" />
+                    </union>
+                </negative>
+            </region>
+        </apply>
+        <apply block="deny-spawner" message="You cannot break the spawners!">
+            <region>
+                <region id="map" />
+            </region>
+        </apply>
+    </regions>
+    <wools team="blue">
+        <wool color="purple" location="-290,10,137" craftable="false">
+            <monument>
+                <block>-467,12,168</block>
+            </monument>
+        </wool>
+        <wool color="magenta" location="-290,10,205" craftable="false">
+            <monument>
+                <block>-467,12,173</block>
+            </monument>
+        </wool>
+    </wools>
+    <wools team="red">
+        <wool color="lime" location="-445,10,136" craftable="false">
+            <monument>
+                <block>-269,12,168</block>
+            </monument>
+        </wool>
+        <wool color="green" location="-445,10,205" craftable="false">
+            <monument>
+                <block>-269,12,173</block>
+            </monument>
+        </wool>
+    </wools>
+    <maxbuildheight>30</maxbuildheight>
+    <itemremove>
+        <item>golden carrot</item>
+        <item>bucket</item>
+    </itemremove>
+    <toolrepair>
+        <tool>stone sword</tool>
+        <tool>bow</tool>
+        <tool>iron pickaxe</tool>
+    </toolrepair>
+    <timelock>on</timelock>
+    <killreward>
+        <item amount="1">golden apple</item>
+    </killreward>
+</map>
