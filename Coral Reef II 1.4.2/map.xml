@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map proto="1.4.0">
     <name>Coral Reef II</name>
-    <version>1.4.2</version>
+    <version>1.4.3</version>
     <gamemode>ctw</gamemode>
     <objective>Capture the wools and return them to your victory monument.</objective>
     <authors>
@@ -160,7 +160,7 @@
             </monument>
         </wool>
     </wools>
-    <maxbuildheight>30</maxbuildheight>
+    <maxbuildheight>25</maxbuildheight>
     <itemremove>
         <item>golden carrot</item>
         <item>bucket</item>
