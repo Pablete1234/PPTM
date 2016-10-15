@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map proto="1.4.0">
     <name>Coral Reef II</name>
-    <version>1.4.4</version>
+    <version>1.4.5</version>
     <gamemode>ctw</gamemode>
     <objective>Capture the wools and return them to your victory monument.</objective>
     <authors>
@@ -174,4 +174,5 @@
     <killreward>
         <item amount="1">golden apple</item>
     </killreward>
+    <feedback>["",{"text":"Have any feedback or suggestions? Share them here!","color":"blue","underlined":true,"clickEvent":{"action":"open_url","value":"https://docs.google.com/forms/d/e/1FAIpQLScGfSBnjPShrnCoWeth2SgCV5EMQDtZgHCWFSDdPzCJ22HtoA/viewform"}}]</feedback>
 </map>
