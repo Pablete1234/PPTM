@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map proto="1.4.0">
     <name>Coral Reef II</name>
-    <version>1.5.0</version>
+    <version>1.5.1</version>
     <gamemode>ctw</gamemode>
     <objective>Capture the wools and return them to your victory monument.</objective>
     <authors>
@@ -61,6 +61,19 @@
             </filter>
             <drops>
                 <item amount="8" material="golden apple" />
+            </drops>
+        </rule>
+        <rule>
+            <region>
+                <everywhere />
+            </region>
+            <filter>
+                <any>
+                    <material>double step</material>
+                </any>
+            </filter>
+            <drops>
+                <item amount="1" material="sandstone" />
             </drops>
         </rule>
     </block-drops>
@@ -163,7 +176,9 @@
     <maxbuildheight>30</maxbuildheight>
     <itemremove>
         <item>golden carrot</item>
-        <item>bucket</item>
+        <item>stained clay</item>
+        <item>stone button</item>
+        <item>brown mushroom</item>
     </itemremove>
     <toolrepair>
         <tool>stone sword</tool>
