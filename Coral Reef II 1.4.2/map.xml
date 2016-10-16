@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map proto="1.4.0">
     <name>Coral Reef II</name>
-    <version>1.4.5</version>
+    <version>1.5.0</version>
     <gamemode>ctw</gamemode>
     <objective>Capture the wools and return them to your victory monument.</objective>
     <authors>
@@ -44,7 +44,7 @@
         </spawn>
         <default>
             <regions yaw="0">
-                <point>-366.5,45,111.5</point>
+                <point>-366.5,44,111.5</point>
             </regions>
         </default>
     </spawns>
