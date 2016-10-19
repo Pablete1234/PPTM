@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map proto="1.4.0">
     <name>Coral Reef II</name>
-    <version>1.5.2</version>
+    <version>1.5.3</version>
     <gamemode>ctw</gamemode>
     <objective>Capture the wools and return them to your victory monument.</objective>
     <authors>
@@ -22,13 +22,14 @@
             <item slot="0">stone sword</item>
             <item slot="1" enchantment="arrow infinite">bow</item>
             <item slot="2" enchantment="durability:4;dig speed:1">iron pickaxe</item>
-            <item slot="6" amount="1">golden apple</item>
-            <item slot="3" amount="64" damage="2">wood</item>
-            <item slot="4" amount="64">sandstone</item>
-            <item slot="5" amount="64" damage="2">wood</item>
+            <item slot="3" enchantment="durability:4">iron axe</item>
+            <item slot="4" amount="64" damage="2">wood</item>
+            <item slot="5" amount="64">sandstone</item>
+            <item slot="6" amount="64" damage="2">wood</item>
+            <item slot="7" amount="1">golden apple</item>
             <item slot="8" amount="32">golden carrot</item>
             <item slot="28" amount="1">arrow</item>
-            <effect duration="8" amplifier="5">resistance</effect>
+            <effect duration="9" amplifier="5">resistance</effect>
         </kit>
     </kits>
     <spawns>
@@ -180,8 +181,11 @@
         <item>stone button</item>
         <item>brown mushroom</item>
         <item>redstone</item>
+        <item>sand</item>
+        <item>sandstone</item>
     </itemremove>
     <toolrepair>
+        <tool>iron axe</tool>
         <tool>stone sword</tool>
         <tool>bow</tool>
         <tool>iron pickaxe</tool>
