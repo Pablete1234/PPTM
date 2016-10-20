@@ -60,6 +60,7 @@
             </filter>
             <drops>
                 <item amount="8" material="golden apple" />
+                <item amount="1" material="iron leggings" />
             </drops>
         </rule>
         <rule>
@@ -191,6 +192,7 @@
     <timelock>on</timelock>
     <killreward>
         <item amount="1">golden apple</item>
+        <item amount="16">sandstone</item>
     </killreward>
     <feedback>["",{"text":"Have any feedback or suggestions? Share them here!","color":"blue","underlined":true,"clickEvent":{"action":"open_url","value":"https://docs.google.com/forms/d/e/1FAIpQLScGfSBnjPShrnCoWeth2SgCV5EMQDtZgHCWFSDdPzCJ22HtoA/viewform"}}]</feedback>
 </map>
