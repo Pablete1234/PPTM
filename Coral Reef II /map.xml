@@ -25,7 +25,7 @@
             <item slot="3" enchantment="durability:4">iron axe</item>
             <item slot="5" amount="64" damage="2">wood</item>
             <item slot="7" amount="1">golden apple</item>
-            <item slot="8" amount="32" damage="2">cooked fish</item>
+            <item slot="8" amount="32" damage="1">cooked fish</item>
             <item slot="28" amount="1">arrow</item>
             <effect duration="9" amplifier="5">resistance</effect>
         </kit>
