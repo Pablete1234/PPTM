@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map proto="1.4.0">
     <name>Coral Reef II</name>
-    <version>1.5.4</version>
+    <version>1.6.0</version>
     <gamemode>ctw</gamemode>
     <objective>Capture the wools and return them to your victory monument.</objective>
     <authors>
@@ -25,7 +25,7 @@
             <item slot="3" enchantment="durability:4">iron axe</item>
             <item slot="5" amount="64" damage="2">wood</item>
             <item slot="7" amount="1">golden apple</item>
-            <item slot="8" amount="32">golden carrot</item>
+            <item slot="8" amount="32" damage="2">cooked fish</item>
             <item slot="28" amount="1">arrow</item>
             <effect duration="9" amplifier="5">resistance</effect>
         </kit>
@@ -175,7 +175,7 @@
     </wools>
     <maxbuildheight>30</maxbuildheight>
     <itemremove>
-        <item>golden carrot</item>
+        <item>cooked fish</item>
         <item>stained clay</item>
         <item>stone button</item>
         <item>brown mushroom</item>
