@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map proto="1.4.0">
     <name>Coral Reef II</name>
-    <version>1.7.0</version>
+    <version>1.8.0</version>
     <gamemode>ctw</gamemode>
     <objective>Capture the wools and return them to your victory monument.</objective>
     <authors>
@@ -182,6 +182,7 @@
         <item>redstone</item>
         <item>sand</item>
         <item>sandstone</item>
+        <item>string</item>
     </itemremove>
     <toolrepair>
         <tool>iron axe</tool>
