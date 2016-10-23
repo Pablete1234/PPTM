@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map proto="1.4.0">
     <name>Coral Reef II</name>
-    <version>1.8.2</version>
+    <version>1.8.1</version>
     <gamemode>ctw</gamemode>
     <objective>Capture the wools and return them to your victory monument.</objective>
     <authors>
@@ -94,8 +94,8 @@
         <rectangle id="map" min="-oo,-oo" max="oo,oo" />
         <union id="bridgezones">
             <cuboid id="bridgezone1" min="-326,30,130" max="-409,0,212" />
-            <cuboid id="bridgezone2" min="-438,30,198" max="-452,0,144" />
-            <cuboid id="bridgezone3" min="-297,30,144" max="-283,0,197" />
+            <cuboid id="bridgezone2" min="-438,30,146" max="-452,0,196" />
+            <cuboid id="bridgezone3" min="-297,30,146" max="-283,0,196" />
         </union>
         <union id="bases">
             <cuboid id="blue-base" min="-485,30,183" max="-462,0,159" />
