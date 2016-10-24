@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <map proto="1.4.2">
 <name>Gobi</name>
-<version>1.0.2</version>
+<version>1.0.3</version>
 <objective>Capture the enemy team's wools.</objective>
 <gamemode>CTW</gamemode>
 <time result="objectives">45m</time>
@@ -103,7 +103,7 @@
             </complement>
             <complement id="red-spawn-bridges">
                 <rectangle min="110,-91" max="94,-116"/>
-                <rectangle min="110,-91" max="94,-111"/>
+                <rectangle min="110,-96" max="94,-111"/>
             </complement>
         </region>
     </apply>
