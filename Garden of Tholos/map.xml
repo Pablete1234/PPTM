@@ -43,13 +43,9 @@
 <kits>
     <kit id="spawn" force="true">
         <item slot="0" unbreakable="true">iron sword</item>
-        <item slot="1" unbreakable="true" material="bow">
-            <enchantment level="1">infinity</enchantment>
-        </item>
+        <item slot="1" unbreakable="true" enchantment="ARROW_INFINITE:1">bow</item>
         <item slot="28">arrow</item>
-        <item slot="2" unbreakable="true" material="iron pickaxe">
-            <enchantment level="1">dig speed</enchantment>
-        </item>
+        <item slot="2" unbreakable="true" enchantment="dig speed:1">iron pickaxe</item>
         <item slot="31" unbreakable="true">iron spade</item>
         <item slot="3" unbreakable="true">iron axe</item>
         <item slot="4" damage="1" amount="64">wood</item>
