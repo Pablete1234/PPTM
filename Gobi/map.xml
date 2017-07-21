@@ -83,8 +83,8 @@
 <regions>
     <apply block="only-blue-some" enter="only-blue" message="You may not modify or enter your own wool room!">
         <region>
-            <rectangle id="pink-wool" min="103,-70" max="90,-56"/>
-            <rectangle id="light-blue-wool" min="103,-151" max="90,-137"/>
+            <rectangle id="pink-wool" min="103.0,-70.0" max="90.0,-56.0"/>
+            <rectangle id="light-blue-wool" min="103.0,-151.0" max="90.0,-137.0"/>
         </region>
     </apply>
     <apply block="only-red-some" enter="only-red" message="You may not modify or enter your own wool room!">
